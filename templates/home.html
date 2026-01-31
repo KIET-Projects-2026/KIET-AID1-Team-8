@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snaptalk - Home</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+    <style>
+        /* Colors: Primary: #6C63FF, Secondary: #F6F7FB, Accent: #2E2E2E */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #F6F7FB;
+            color: #2E2E2E;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #6C63FF;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* LOGO + TITLE */
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .logo-box img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+        }
+
+        .logo-box h1 {
+            color: #fff;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        nav a {
+            color: #fff;
+
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #F6F7FB;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 90px 20px;
+            background-image: 
+                linear-gradient(
+                    rgba(108, 99, 255, 0.75),
+                    rgba(108, 99, 255, 0.75)
+                ),
+                url("static/download.jpg");
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        .hero h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 650px;
+            margin: 0 auto;
+            color: #F6F7FB;
+        }
+
+        /* DEMO */
+        .demo-section {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .demo-section h3 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 35px;
+            color: #6C63FF;
+        }
+
+        .demo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .demo-item {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .demo-item:hover {
+            transform: translateY(-6px);
+        }
+
+        .demo-item img {
+            width: 100%;
+            display: block;
+        }
+
+        .demo-item p {
+            padding: 15px;
+            font-weight: 500;
+        }
+/* ===== FOOTER BASE (COLORS UNCHANGED) ===== */
+.footer {
+    background-color: #2E2E2E;
+    color: #fff;
+    padding: 70px 8% 35px;
+    margin-top: 60px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 🌊 SUBTLE TOP WAVE */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    background: #2E2E2E;
+    border-radius: 0 0 50% 50%;
+    z-index: 0;
+}
+
+/* GRID */
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+    position: relative;
+    z-index: 2;
+}
+
+/* BRAND */
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.footer-brand img {
+    width: 40px;
+}
+
+.footer-brand span {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* ABOUT TEXT */
+.footer-about p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 14px;
+}
+
+/* SOCIAL ICONS */
+.footer-social {
+    margin-top: 14px;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 16px;
+    font-size: 18px;
+    color: #fff;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-social a:hover {
+    color: #6C63FF;
+    transform: translateY(-3px);
+}
+
+/* LINKS */
+.footer-links-section h4,
+.footer-contact h4 {
+    font-size: 16px;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.footer-links-section a {
+    display: block;
+    margin-bottom: 12px;
+    color: #6C63FF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-links-section a:hover {
+    text-decoration: underline;
+}
+
+/* CONTACT */
+.footer-contact p {
+    font-size: 15px;
+    color: #ccc;
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 16px;
+    color: #bbb;
+    position: relative;
+    z-index: 2;
+    padding-top: 35px;
+}
+
+/* ✨ GLOW DIVIDER */
+.footer-bottom::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(108, 99, 255, 0.8),
+        transparent
+    );
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .footer-bottom {
+        font-size: 15px;
+    }
+}
+/* ============================
+   📱 GLOBAL RESPONSIVENESS
+   ============================ */
+@media (max-width: 768px) {
+
+  /* ---- GENERAL ---- */
+  body {
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 28px !important;
+  }
+
+  h2 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 15px !important;
+    line-height: 1.6;
+  }
+
+  section {
+    padding: 50px 6% !important;
+  }
+
+  /* ---- NAVBAR ---- */
+  header {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  /* ---- HERO SECTIONS ---- */
+  .hero,
+  .about-hero,
+  .contact-hero {
+    text-align: center;
+    padding: 70px 6% 50px;
+  }
+
+  /* ---- GRID / CARDS ---- */
+  .grid,
+  .cards,
+  .features,
+  .contact-cards {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  /* ---- IMAGES ---- */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ---- FOOTER ---- */
+  footer {
+    text-align: center;
+    padding: 40px 6% 25px;
+  }
+
+  footer .footer-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  footer .social-icons {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  footer .copyright {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+/* ============================
+   📱 HOME PAGE – ABSOLUTE FINAL FIX
+   ============================ */
+@media (max-width: 768px) {
+
+  /* 🔥 KILL FLEX WRAP COMPLETELY */
+  .demo-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+  }
+
+  /* 🔥 FORCE EACH CARD FULL ROW */
+  .demo-grid .demo-item {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto 20px !important;
+  }
+
+  /* 🔥 FIX WHITE SPACE AFTER FOOTER */
+  body {
+    background-color: #F6F7FB !important;
+  }
+
+  html {
+    background-color: #2E2E2E !important;
+  }
+
+  footer {
+    background-color: #2E2E2E !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 30px !important;
+  }
+}
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo-box">
+        <img src="static\Screenshot 2025-12-23 132535.png" alt="Snaptalk Logo">
+        <h1>SNAPTALK</h1>
+    </div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/upload">Upload</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <h2>Transform Your Images into Words Effortlessly</h2>
+    <p>
+        Snaptalk leverages state-of-the-art AI models to understand your photos and
+        generate accurate, meaningful captions in seconds.
+    </p>
+</section>
+
+<!-- DEMO -->
+<section class="demo-section">
+    <h3>Want To Know How It Works!! "Picture This"</h3>
+
+    <div class="demo-grid">
+        <div class="demo-item">
+            <img src="static/96985174_31d4c6f06d.jpg">
+            <p>A lone hiker explores the breathtaking Himalayan mountains.</p>
+        </div>
+
+        <div class="demo-item">
+            <img src="static/97105139_fae46fe8ef.jpg">
+            <p>Locals wave as a car speeds through the desert sands.</p>
+        </div>
+
+        <div class="demo-item">
+            <img src="static/97406261_5eea044056.jpg">
+            <p>Two dogs playfully interact inside a car.</p>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- LEFT : ABOUT -->
+    <div class="footer-about">
+      <div class="footer-brand">
+        <img src="static\Screenshot 2025-12-23 133259.png" alt="Snaptalk Logo">
+        <span>Snaptalk</span>
+      </div>
+
+      <p>
+        Snaptalk is an AI-powered Image Caption Generator designed to bridge the
+        gap between visual content and natural language. The system leverages
+        <strong>Convolutional Neural Networks (CNN)</strong> to extract deep
+        visual features from images and
+        <strong>Long Short-Term Memory (LSTM)</strong> networks to generate
+        meaningful, human-like captions.
+      </p>
+
+      <p>
+        This project demonstrates the practical application of Deep Learning in
+        computer vision and natural language processing, enabling automatic image
+        understanding and caption generation with high accuracy.
+      </p>
+
+      <!-- SOCIAL ICONS -->
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- MIDDLE : QUICK LINKS -->
+    <div class="footer-links-section">
+      <h4>QUICK LINKS</h4>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/upload">Upload</a>
+      <a href="/contact">Contact</a>
+    </div>
+
+    <!-- RIGHT : CONTACT -->
+    <div class="footer-contact">
+      <h4>CONTACT US</h4>
+      <p>snaptalk.ai@gmail.com</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Snaptalk | AI-Powered Image Caption Generator | All Rights Reserved.
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>

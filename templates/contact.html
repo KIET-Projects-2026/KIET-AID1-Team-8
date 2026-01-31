@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snaptalk - Contact</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* Colors */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#F6F7FB;
+    color:#2E2E2E;
+}
+
+/* HEADER */
+header{
+    background:#6C63FF;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-box{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.logo-box img{
+    width:42px;
+    height:42px;
+}
+
+.logo-box h1{
+    color:#fff;
+    font-size:26px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:600;
+}
+
+/* HERO SECTION */
+.contact-hero{
+    text-align:center;
+    padding:90px 20px 70px;
+    background:linear-gradient(
+        rgba(108, 99, 255, 0.75),
+        rgba(108, 99, 255, 0.75)
+    );
+    color:#fff;
+}
+
+.contact-hero h2{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.contact-hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+    color:#F6F7FB;
+}
+
+/* INFO BOXES */
+.info-section{
+    max-width:1100px;
+    margin:-60px auto 50px;
+    padding:0 20px;
+}
+
+.info-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+    justify-content:center;
+}
+
+.info-box{
+    background:#fff;
+    width:280px;
+    padding:30px 20px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.info-box h3{
+    color:#6C63FF;
+    margin-bottom:10px;
+}
+
+/* CONTACT FORM */
+.contact-section{
+    max-width:700px;
+    margin:40px auto;
+    background:#fff;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-section h2{
+    text-align:center;
+    color:#6C63FF;
+    margin-bottom:30px;
+}
+
+.contact-section form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-section input,
+.contact-section textarea{
+    padding:14px;
+    border:2px solid #6C63FF;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.contact-section button{
+    background:#6C63FF;
+    color:#fff;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.contact-section button:hover{
+    background:#574fd1;
+}
+
+/* ===== FOOTER BASE (COLORS UNCHANGED) ===== */
+.footer {
+    background-color: #2E2E2E;
+    color: #fff;
+    padding: 70px 8% 35px;
+    margin-top: 60px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 🌊 SUBTLE TOP WAVE */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    background: #2E2E2E;
+    border-radius: 0 0 50% 50%;
+    z-index: 0;
+}
+
+/* GRID */
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+    position: relative;
+    z-index: 2;
+}
+
+/* BRAND */
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.footer-brand img {
+    width: 40px;
+}
+
+.footer-brand span {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* ABOUT TEXT */
+.footer-about p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 14px;
+}
+
+/* SOCIAL ICONS */
+.footer-social {
+    margin-top: 14px;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 16px;
+    font-size: 18px;
+    color: #fff;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-social a:hover {
+    color: #6C63FF;
+    transform: translateY(-3px);
+}
+
+/* LINKS */
+.footer-links-section h4,
+.footer-contact h4 {
+    font-size: 16px;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.footer-links-section a {
+    display: block;
+    margin-bottom: 12px;
+    color: #6C63FF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-links-section a:hover {
+    text-decoration: underline;
+}
+
+/* CONTACT */
+.footer-contact p {
+    font-size: 15px;
+    color: #ccc;
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 16px;
+    color: #bbb;
+    position: relative;
+    z-index: 2;
+    padding-top: 35px;
+}
+
+/* ✨ GLOW DIVIDER */
+.footer-bottom::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(108, 99, 255, 0.8),
+        transparent
+    );
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .footer-bottom {
+        font-size: 15px;
+    }
+}
+/* ============================
+   📱 GLOBAL RESPONSIVENESS
+   ============================ */
+@media (max-width: 768px) {
+
+  /* ---- GENERAL ---- */
+  body {
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 28px !important;
+  }
+
+  h2 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 15px !important;
+    line-height: 1.6;
+  }
+
+  section {
+    padding: 50px 6% !important;
+  }
+
+  /* ---- NAVBAR ---- */
+  header {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+
+  /* ---- HERO SECTIONS ---- */
+  .hero,
+  .about-hero,
+  .contact-hero {
+    text-align: center;
+    padding: 70px 6% 50px;
+  }
+
+  /* ---- GRID / CARDS ---- */
+  .grid,
+  .cards,
+  .features,
+  .contact-cards {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  /* ---- IMAGES ---- */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ---- FOOTER ---- */
+  footer {
+    text-align: center;
+    padding: 40px 6% 25px;
+  }
+
+  footer .footer-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  footer .social-icons {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  footer .copyright {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo-box">
+        <img src="static\Screenshot 2025-12-23 132535.png">
+        <h1>SNAPTALK</h1>
+    </div>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/upload">Upload</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="contact-hero">
+    <h2>Get in Touch</h2>
+    <p>
+        Have questions, feedback, or ideas?  
+        We’d love to hear from you. Reach out to Snaptalk anytime.
+    </p>
+</section>
+
+<!-- INFO BOXES -->
+<section class="info-section">
+    <div class="info-grid">
+        <div class="info-box">
+            <h3>Email</h3>
+            <p>snaptalk.ai@gmail.com</p>
+        </div>
+
+        <div class="info-box">
+    <h3>Support</h3>
+    <p>Email & Web Form Support</p>
+</div>
+
+
+        <div class="info-box">
+    <h3>Response Time</h3>
+    <p>Replies within 24 hours</p>
+</div>
+
+    </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="contact-section">
+    <h2>Send Us a Message</h2>
+    <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <div id="formMessage" style="margin-top:20px;text-align:center;color:#6C63FF;"></div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- LEFT : ABOUT -->
+    <div class="footer-about">
+      <div class="footer-brand">
+        <img src="static\Screenshot 2025-12-23 133259.png" alt="Snaptalk Logo">
+        <span>Snaptalk</span>
+      </div>
+
+      <p>
+        Snaptalk is an AI-powered Image Caption Generator designed to bridge the
+        gap between visual content and natural language. The system leverages
+        <strong>Convolutional Neural Networks (CNN)</strong> to extract deep
+        visual features from images and
+        <strong>Long Short-Term Memory (LSTM)</strong> networks to generate
+        meaningful, human-like captions.
+      </p>
+
+      <p>
+        This project demonstrates the practical application of Deep Learning in
+        computer vision and natural language processing, enabling automatic image
+        understanding and caption generation with high accuracy.
+      </p>
+
+      <!-- SOCIAL ICONS -->
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- MIDDLE : QUICK LINKS -->
+    <div class="footer-links-section">
+      <h4>QUICK LINKS</h4>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/upload">Upload</a>
+      <a href="/contact">Contact</a>
+    </div>
+
+    <!-- RIGHT : CONTACT -->
+    <div class="footer-contact">
+      <h4>CONTACT US</h4>
+      <p>snaptalk.ai@gmail.com</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Snaptalk | AI-Powered Image Caption Generator | All Rights Reserved.
+  </div>
+</footer>
+
+
+<script>
+const form = document.getElementById("contactForm");
+const msg = document.getElementById("formMessage");
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbx9qXwhRhtNpafUjvrg9EWs72dtrS1XUoQ5DHS09gwIXeFnpmowaPSkJn2oIiZ2S8tskw/exec";
+
+form.addEventListener("submit", e => {
+    e.preventDefault();
+
+    const name = form.querySelector("input[type='text']").value;
+    const email = form.querySelector("input[type='email']").value;
+    const message = form.querySelector("textarea").value;
+
+    fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify({
+            name: name,
+            email: email,
+            message: message
+        })
+    })
+    .then(res => res.json())
+    .then(() => {
+        msg.innerText = "Thank you! Your message has been sent successfully.";
+        form.reset();
+    })
+    .catch(() => {
+        msg.innerText = "Something went wrong. Please try again.";
+    });
+});
+</script>
+
+
+</body>
+</html>
